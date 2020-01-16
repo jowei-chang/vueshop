@@ -20,11 +20,11 @@
         <tr v-for="(item) in products" :key="item.id">
           <td>{{ item.category }}</td>
           <td>{{ item.title }}</td>
-          <td class="text-rigth">
-            {{ item.origin_price }}
+          <td class="text-right">
+            {{ item.origin_price | currency }}
           </td>
-          <td class="text-rigth">
-            {{ item.price }}
+          <td class="text-right">
+            {{ item.price | currency }}
           </td>
           <td>
             <span v-if="item.is_enabled" class="text-success">啟用</span>
